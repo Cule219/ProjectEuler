@@ -11,5 +11,3 @@
 let sqSum = [...Array(100).keys()].reduce((a,v) => a+(v+1), 0)**2;
 let sumSq = [...Array(100).keys()].reduce((a,v) => a+(v+1)**2, 0);
 console.log(sqSum - sumSq);
-
-//testitis
