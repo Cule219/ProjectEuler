@@ -7,9 +7,7 @@ let n = 15;
 let primes = [2,3,5,7,11,13];
 while(primes.length < 10001) {
   n+=2;
-  if(isPrime(n)) {
-    primes.push(n);
-  }
+  if(isPrime(n)) primes.push(n);
 }
 console.log(n, primes[10000]);
 function isPrime(n) {
