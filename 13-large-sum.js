@@ -100,7 +100,6 @@ let data =
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690`
 
+let sum = data.split('\n').reduce((acc, val) => acc += parseFloat(val.slice(0,10) + '.' + val.slice(10)), 0);
 
-let sum = data.split('\n').reduce((acc, val) => acc += Number(val), 0);
-
-console.log(sum/10000000000000000000000000000000000);
+console.log(sum.toString().slice(0,10));
