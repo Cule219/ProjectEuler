@@ -2,6 +2,7 @@
     By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
     What is the 10 001st prime number?
  */
+const fs = require('fs');
 
 let n = 15;
 let primes = [2,3,5,7,11,13];
@@ -14,4 +15,4 @@ function isPrime(n) {
     for(i = 2; i <= Number(Math.sqrt(n)); i++)
         if(n % i === 0) return false;
     return true;
-}  
+}
