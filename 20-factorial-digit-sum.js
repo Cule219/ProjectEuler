@@ -10,6 +10,8 @@ Find the sum of the digits in the number 100!
  */
 
 function bigIntMultiplier(string, int) {
+  //6227020800 14
+  console.log(string, int);
   string = string + "";
   let result = "";
   let numbers = [];
@@ -22,13 +24,19 @@ function bigIntMultiplier(string, int) {
       : num;
     result = existingNo + result.slice(-i);
   });
+  console.log(int, result);
   return result;
 }
 
-console.log(
-  Array.from({ length: 100 }, (_, i) => i + 1)
-    .reduce((a, v) => (a = bigIntMultiplier(a, v)))
-    .split("")
-    .reduce((a, v) => Number(v) + a, 0)
+let factorial = Array.from({ length: 14 }, (_, i) => i + 1).reduce(
+  (a, v) => (a = bigIntMultiplier(a, v))
 );
+//.split("");
+//.reduce((a, v) => Number(v) + a, 0)
+console.log(factorial.length);
 // 545
+/**
+ * 13 '6227020800'
+6227020800 14
+14 '87178281200'
+ */
