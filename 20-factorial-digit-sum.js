@@ -20,7 +20,6 @@ function bigIntMultiplier(string, int) {
     let existingNo = result[i] ? Number(result.slice(0, -i)) + num : num;
     result = existingNo + result.slice(-i);
   });
-  console.log(int, result);
   return result;
 }
 
