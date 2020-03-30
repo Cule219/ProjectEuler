@@ -16,7 +16,22 @@ for (let i = 12; i < 28124; i++) {
   for (let ii = 1; ii <= i / 2; ii++) if (i % ii === 0) sum += ii;
   if (sum > i) abundantNos.push(i);
 }
-
 let notsummable = [];
 
-for (let i = 1; i < 28124; i++) {}
+for (let i = 1; i < 28124; i++) {
+  let not = true;
+  for (let ii = 0; ii < abundantNos.length; ii++) {
+    if (abundantNos.includes(i - abundantNos[ii])) {
+      not = false;
+      break;
+    } else if (i < abundantNos[ii]) {
+      break;
+    }
+  }
+  if (not) notsummable.push(i);
+}
+
+console.log(
+  //   notsummable,
+  notsummable.reduce((a, b) => a + b)
+);
