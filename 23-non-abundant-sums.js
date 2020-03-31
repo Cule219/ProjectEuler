@@ -11,14 +11,15 @@ Find the sum of all the positive integers which cannot be written as the sum of 
 
 let abundantNos = [];
 
-for (let i = 12; i < 28124; i++) {
+for (let i = 12; i <= 28123; i++) {
   let sum = 0;
   for (let ii = 1; ii <= i / 2; ii++) if (i % ii === 0) sum += ii;
   if (sum > i) abundantNos.push(i);
 }
+
 let notsummable = [];
 
-for (let i = 1; i < 28124; i++) {
+for (let i = 1; i <= 28123; i++) {
   let not = true;
   for (let ii = 0; ii < abundantNos.length; ii++) {
     if (abundantNos.includes(i - abundantNos[ii])) {
@@ -31,7 +32,4 @@ for (let i = 1; i < 28124; i++) {
   if (not) notsummable.push(i);
 }
 
-console.log(
-  //   notsummable,
-  notsummable.reduce((a, b) => a + b)
-);
+console.log(notsummable.reduce((a, b) => a + b));
