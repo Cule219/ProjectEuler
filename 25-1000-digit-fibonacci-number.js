@@ -46,7 +46,6 @@ while (true) {
   first = sec;
   sec = num;
   i++;
-  // console.log(i, num);
   if (num.length === 1000) {
     break;
   }
