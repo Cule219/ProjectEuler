@@ -1,4 +1,4 @@
-About [a link](https://projecteuler.net/archives)Project Euler
+About [Project Euler](https://projecteuler.net/archives)
 Leonhard Euler (1707-1783)
 Where should I start?
 
